@@ -1,0 +1,8 @@
+<?php
+require_once 'includes/database.php';
+include 'templates/header.php';
+
+echo "Add a new book page";
+
+include 'templates/footer.php';
+?>

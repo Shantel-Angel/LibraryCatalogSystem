@@ -1,0 +1,27 @@
+<?php
+require_once 'includes/database.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get form data
+    $title = $_POST['title'];
+    $author = $_POST['author'];
+    $publication_year = $_POST['publication_year'];
+    $ISBN = $_POST['ISBN'];
+
+    // Validate and sanitize input data (Add your validation logic here)
+
+    // Insert data into the 'books' table
+    $sql = "INSERT INTO books (title, author, publication_year, ISBN) 
+            VALUES ('$title', '$author', '$publication_year', '$ISBN')";
+
+    if (executeQuery($sql)) {
+        echo "Book added successfully!";
+    } else {
+        echo "Error adding book: " . $conn->error;
+    }
+} else {
+    // If the form is not submitted via POST, redirect to the add_book page
+    header("Location: add_book.php");
+    exit();
+}
+?>

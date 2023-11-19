@@ -1,0 +1,8 @@
+<?php
+require_once 'includes/database.php';
+include 'templates/header.php';
+
+echo "Welcome to the Library Catalog System!";
+
+include 'templates/footer.php';
+?>

@@ -1,0 +1,8 @@
+<?php
+require_once 'includes/database.php';
+include 'templates/header.php';
+
+echo "Edit book information page";
+
+include 'templates/footer.php';
+?>
